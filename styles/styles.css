@@ -1,0 +1,61 @@
+body{
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    color: antiquewhite;
+    text-align: center;
+    font-weight: bold;
+}
+#top{
+    color:aqua
+}
+.fancy{
+    color:blue
+
+
+
+}
+h2{
+    color: white;
+    text-align: right;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+p{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', 'Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+
+.common{
+    background-color:azure;
+    border: 2px solid white;
+    position: absolute;
+}
+
+
+.header{
+    top:5x;
+    left: 15px;
+    right: 25px;
+    height:100px
+
+}
+
+.left{
+    top:115px;
+    left:15px;
+    width: 100px;
+    bottom:40px;
+}
+
+.main{
+    top: 115px;
+    left: 130px;
+    right:140px;
+    height: fit-content;
+    
+}

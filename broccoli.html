@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Replace Broccoli With Brussel Sprouts</title>
+
+    <style>
+        body {
+            background-color: white;
+            font-family: Georgia, serif;
+            color: black;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-weight: bold;
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        a {
+            color: inherit; /* so color comes from .broccoli / .brussel when needed */
+            text-decoration: underline;
+        }
+
+        .broccoli {
+            color: red;
+            font-weight: bold;
+        }
+
+        .brussel {
+            color: green;
+            font-weight: bold;
+        }
+
+        .page-intro {
+            margin-bottom: 1rem;
+        }
+
+        .layout {
+            display: grid;
+            grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr);
+            gap: 20px;
+        }
+
+        .filter-bar {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 10px 0 20px;
+            flex-wrap: wrap;
+        }
+
+        .filter-bar label {
+            font-weight: bold;
+        }
+
+        select {
+            padding: 4px 8px;
+            font-family: Georgia, serif;
+        }
+
+        .recipes {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+
+        .recipe-card {
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 12px 14px;
+        }
+
+        .map-card {
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 10px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 220px;
+            border: 0;
+        }
+
+        @media (max-width: 800px) {
+            .layout {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        Swap <span class="broccoli">broccoli</span> for 
+        <span class="brussel">brussel sprouts</span>
+    </h1>
+
+    <p class="page-intro">
+        Learn how to replace 
+        <a href="https://en.wikipedia.org/wiki/Broccoli" target="_blank" class="broccoli">broccoli</a>
+        with
+        <a href="https://en.wikipedia.org/wiki/Brussels_sprout" target="_blank" class="brussel">brussel sprouts</a>
+        in your favorite recipes, and where to find fresh
+        <span class="brussel">brussel sprouts</span> locally.
+    </p>
+
+    <div class="layout">
+        <!-- LEFT: Recipes + Filter -->
+        <main>
+            <div class="filter-bar">
+                <label for="categoryFilter">Recipe category:</label>
+                <select id="categoryFilter">
+                    <option value="all">All</option>
+                    <option value="roasted">Roasted</option>
+                    <option value="stir-fry">Stir-Fry</option>
+                    <option value="salad">Salad</option>
+                </select>
+            </div>
+
+            <section class="recipes" id="recipes">
+                <!-- Recipe 1 -->
+                <article class="recipe-card" data-category="roasted">
+                    <h2>Roasted Garlic Parmesan <span class="brussel">brussel sprouts</span></h2>
+                    <p>
+                        Anywhere you would roast 
+                        <span class="broccoli">broccoli</span>, you can roast 
+                        <span class="brussel">brussel sprouts</span> instead.
+                    </p>
+                    <h3>Ingredients</h3>
+                    <ul>
+                        <li>4 cups halved <span class="brussel">brussel sprouts</span></li>
+                        <li>2 tbsp olive oil</li>
+                        <li>3 cloves garlic, minced</li>
+                        <li>1/4 cup grated Parmesan cheese</li>
+                        <li>Salt and pepper to taste</li>
+                    </ul>
+
+                    <h3>Directions</h3>
+                    <ol>
+                        <li>Preheat oven to 400°F (200°C).</li>
+                        <li>Toss <span class="brussel">brussel sprouts</span> with olive oil, garlic, salt, and pepper.</li>
+                        <li>Spread on a baking sheet and roast 20–25 minutes until edges are browned and crisp.</li>
+                        <li>Sprinkle with Parmesan and roast 3–5 more minutes until melted.</li>
+                    </ol>
+                </article>
+
+                <!-- Recipe 2 -->
+                <article class="recipe-card" data-category="stir-fry">
+                    <h2>Quick Sesame Stir-Fried <span class="brussel">brussel sprouts</span></h2>
+                    <p>
+                        If your stir-fry usually uses 
+                        <span class="broccoli">broccoli</span>, swap in thinly sliced 
+                        <span class="brussel">brussel sprouts</span> for a softer bite and
+                        slightly sweeter flavor.
+                    </p>
+                    <h3>Ingredients</h3>
+                    <ul>
+                        <li>3 cups thinly sliced <span class="brussel">brussel sprouts</span></li>
+                        <li>1 tbsp sesame oil</li>
+                        <li>1 tbsp soy sauce</li>
+                        <li>1 tsp honey or maple syrup</li>
+                        <li>1 tsp toasted sesame seeds</li>
+                    </ul>
+
+                    <h3>Directions</h3>
+                    <ol>
+                        <li>Heat sesame oil in a skillet or wok over medium-high heat.</li>
+                        <li>Add <span class="brussel">brussel sprouts</span> and cook 4–6 minutes, stirring often.</li>
+                        <li>Stir in soy sauce and honey; cook 1–2 more minutes.</li>
+                        <li>Top with sesame seeds and serve over rice or noodles.</li>
+                    </ol>
+                </article>
+
+                <!-- Recipe 3 -->
+                <article class="recipe-card" data-category="salad">
+                    <h2>Shaved <span class="brussel">brussel sprouts</span> Salad</h2>
+                    <p>
+                        Instead of a crunchy <span class="broccoli">broccoli</span> slaw, use shredded 
+                        <span class="brussel">brussel sprouts</span> for a tender, leafy texture.
+                    </p>
+                    <h3>Ingredients</h3>
+                    <ul>
+                        <li>4 cups finely shredded <span class="brussel">brussel sprouts</span></li>
+                        <li>1/3 cup dried cranberries</li>
+                        <li>1/4 cup chopped almonds or pecans</li>
+                        <li>1/4 cup grated hard cheese (Parmesan or similar)</li>
+                        <li>3 tbsp olive oil</li>
+                        <li>2 tbsp lemon juice</li>
+                        <li>1 tsp Dijon mustard</li>
+                        <li>Salt and pepper to taste</li>
+                    </ul>
+
+                    <h3>Directions</h3>
+                    <ol>
+                        <li>Whisk olive oil, lemon juice, Dijon, salt, and pepper in a small bowl.</li>
+                        <li>In a large bowl, combine shredded 
+                            <span class="brussel">brussel sprouts</span>, cranberries, nuts, and cheese.
+                        </li>
+                        <li>Pour dressing over the salad and toss well.</li>
+                        <li>Let sit 10–15 minutes to soften the 
+                            <span class="brussel">brussel sprouts</span> before serving.
+                        </li>
+                    </ol>
+                </article>
+            </section>
+        </main>
+
+        <!-- RIGHT: Farmers Market / Map -->
+        <aside class="map-card">
+            <h2>Find Fresh <span class="brussel">brussel sprouts</span></h2>
+            <p>
+                For local, seasonal <span class="brussel">brussel sprouts</span>, visit the Provo Farmers Market
+                at Pioneer Park. You can often find vendors selling both 
+                <span class="brussel">brussel sprouts</span> and 
+                <span class="broccoli">broccoli</span> straight from nearby farms.
+            </p>
+            <p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Provo+Farmers+Market+500+W+Center+St+Provo+UT" target="_blank">
+                    Open Provo Farmers Market in Google Maps
+                </a>
+            </p>
+            <iframe
+                loading="lazy"
+                allowfullscreen
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps?q=Provo+Farmers+Market+500+W+Center+St+Provo+UT&output=embed">
+            </iframe>
+        </aside>
+    </div>
+
+    <script>
+        // Simple recipe category filter
+        (function () {
+            const filterSelect = document.getElementById('categoryFilter');
+            const recipes = document.querySelectorAll('.recipe-card');
+
+            function applyFilter() {
+                const value = filterSelect.value;
+                recipes.forEach(card => {
+                    const category = card.getAttribute('data-category');
+                    if (value === 'all' || value === category) {
+                        card.style.display = '';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            }
+
+            filterSelect.addEventListener('change', applyFilter);
+            applyFilter(); // initial state
+        })();
+    </script>
+</body>
+</html>
